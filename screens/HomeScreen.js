@@ -112,7 +112,15 @@ renderPost=post=>{
       </View>
   <Text style={styles.post}>{post.text}</Text>
   <Image source={{uri:post.image}} style={styles.postImage} resizeMode='cover'/>
-  
+  <View style={{flexDirection:'row'}}>
+    <Ionicons name='ios-heart-empty' size={24} color="#737888"
+    style={{marginRight:16}}/>
+    <Ionicons
+    name='ios-chatboxes'
+    size={24}
+    color="#73788B"/>
+
+  </View>
       </View>
     </View>
   )
@@ -123,7 +131,18 @@ renderPost=post=>{
     LayoutAnimation.easeInEaseOut()
     return (
       <View style={styles.container}>
-       
+       <View style={styles.header}>
+         <Text style={styles.headerTitle}>
+            Feed
+         </Text>
+
+       </View>
+       <FlatList style={styles.feed}
+       data={this.state.dataSource}
+       renderItem={({item})=>this.renderPost(item)}
+       keyExtractor={item=>item.uid}
+       showsVerticalScrollIndicator={false}
+       />
       </View>
     );
   }
