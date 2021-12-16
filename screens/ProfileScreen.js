@@ -30,7 +30,29 @@ export default class ProfileScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-       
+       <View style={{marginTop:63,alignItems:'center'}}>
+         <View style={styles.avatarContainer}>
+           <Image style={styles.avatar}
+           source={this.state.user.avatar?{uri:this.state.user.avatar}:null}/>
+
+         </View>
+    <Text style={styles.name}>{this.state.user.name}</Text>
+      <View style={styles.statsContainer}>
+        <View style={styles.stat}>
+          <Text style={styles.statAmount}>21</Text>
+          <Text style={styles.statTitle}>Posts</Text>
+        </View>
+        <View style={styles.stat}>
+          <Text style={styles.statAmount}>981</Text>
+          <Text style={styles.statTitle}>Followers</Text>
+        </View>
+        <View style={styles.stat}>
+          <Text style={styles.statAmount}>63</Text>
+          <Text style={styles.statTitle}>Following</Text>
+        </View>
+
+      </View>
+       </View>
        <TouchableOpacity style={styles.button} onPress={()=>Fire.shared.signOut()}>
          <Text style={{color:'#FFF',fontWeight:'500'}}>Log out</Text>
       </TouchableOpacity>     
