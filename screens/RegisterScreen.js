@@ -128,12 +128,45 @@ const styles=StyleSheet.create({
       textAlign:'center',
       color:'#FFF'
   },
+  errorMessage:{
+      marginTop:6,
+      alignItems:'center',
+      justifyContent:'center',
+      marginHorizontal:30
+  },
+  form:{
+    marginTop:210,
+    marginHorizontal:30
+  },
+  inputTitle:{
+      color:'#8A89FE',
+      fontSize:10,
+      textTransform:'uppercase'
+  },
   input:{
       borderBottomColor:'#8A8F9E',
       borderBottomWidth:StyleSheet.hairlineWidth,
       height:40,
       fontSize:15,
       color:"#FFF"
+  },
+  button:{
+      marginHorizontal:30,
+      backgroundColor:"#E9446A",
+      borderRadius:4,
+      height:52,
+      alignItems:'center',
+      justifyContent:'center',
+      marginTop:16
+
+  },
+  error:{
+      color:'#E9446A',
+      fontSize:13,
+      fontWeight:'600',
+      textAlign:'center',
+      marginTop:16
+
   },
   back:{
       position: 'absolute',
@@ -145,6 +178,15 @@ const styles=StyleSheet.create({
       backgroundColor:'rgba(21,22,48,0.1)',
       alignItems:'center',
       justifyContent:'center'
+  },
+  avatarPlaceholder: {
+    width: 100,
+    height: 100,
+    backgroundColor: '#e1e2e6',
+    borderRadius: 50,
+    marginTop: 48,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   avatar: {
     position: 'absolute',
