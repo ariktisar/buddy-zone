@@ -73,11 +73,41 @@ export default class RegisterScreen extends Component {
 
        
      
-    
+      <View style={styles.form}>
+      <View>
+            <Text style={styles.inputTitle}>Full name</Text>
+            <TextInput style={styles.input} autoCapitalize="none"
+            onChangeText={name=> this.setState({ user: { ...this.state.user, name } })}
+            value={this.state.user.name}></TextInput>
+        </View>
+        <View  style={{marginTop:16}}>
+            <Text style={styles.inputTitle}>Email</Text>
+            <TextInput style={styles.input} autoCapitalize="none"
+            onChangeText={email=>this.setState({ user: { ...this.state.user, email } })
+        }
+            value={this.state.user.email}></TextInput>
+        </View>
+        <View style={{marginTop:16}}>
+            <Text style={styles.inputTitle}>Password</Text>
+            <TextInput style={styles.input} autoCapitalize="none" secureTextEntry
+            value={this.state.user.password}
+            onChangeText={password=>this.setState({ user:{...this.state.user,password }})}></TextInput>
+        </View>
+      </View>
       <TouchableOpacity style={styles.button} onPress={this.handleSignup}>
           <Text style={{color:'#FFF',fontWeight:'500'}}>Sign up</Text>
       </TouchableOpacity>
-      
+      <TouchableOpacity 
+      style={{alignSelf:'center',marginTop:32}}
+      onPress={()=>this.props.navigation.navigate('Login')}>
+        
+        <Text style={{color:'#FFF',fontSize:12}}>
+           Already have an account? <Text style={{fontWeight:'500',color:'#8A89FE'}}>
+                Sign in
+            </Text>
+        </Text>
+
+      </TouchableOpacity>
       </View>
       </ImageBackground>
       </View>
