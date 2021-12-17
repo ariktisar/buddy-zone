@@ -13,7 +13,9 @@ export default class LoginScreen extends Component {
 
     state={
         email:'',
-        password:'',
+        pa
+        
+        ssword:'',
         errorMessage:null
     }
 
@@ -31,36 +33,51 @@ export default class LoginScreen extends Component {
       <View style={styles.container}>
           <StatusBar barStyle="light-content"></StatusBar>
           <ImageBackground
-          source={require('../assets/images/background.jpg')}
+          sourc
+          
+          e={require('../assets/images/background.jpg')}
           style={{flex: 1,
             width: null,
             height: null,
             justifyContent:'center'}}>
+
+
+
 
          
         <Text style={styles.greeting}> {`Hello again. \n Welcome back.`} </Text>
         <View style={styles.errorMessage}>
     {this.state.errorMessage && <Text style={styles.error}>{this.state.errorMessage}</Text>}
       </View>
+
+
+
       <View style={styles.form}>
         <View>
-            <Text style={styles.inputTitle}>Email</Text>
+
             <TextInput style={styles.input} autoCapitalize="none"
             onChangeText={email=>this.setState({email})}
             value={this.state.email}></TextInput>
         </View>
         <View style={{marginTop:32}}>
-            <Text style={styles.inputTitle}>Password</Text>
+            <Text style={styles.i
+              
+              nputTitle}>Password</Text>
             <TextInput style={styles.input} autoCapitalize="none" secureTextEntry
             value={this.state.password}
+
             onChangeText={password=>this.setState({password})}></TextInput>
         </View>
       </View>
       <TouchableOpacity style={styles.button} onPress={this.handleLogin}>
-          <Text style={{color:'#FFF',fontWeight:'500'}}>Sign in</Text>
+          <Text style={{
+            
+            
+            color:'#FFF',fontWeight:'500'}}>Sign in</Text>
       </TouchableOpacity>
       <TouchableOpacity style={{alignSelf:'center',marginTop:32}}
       onPress={()=>this.props.navigation.navigate('Register')}>
+            <Text style={styles.inputTitle}>Email</Text>
         
         <Text style={{color:'#FFF',fontSize:12}}>
             New to SocialApp? <Text style={{fontWeight:'500',color:'#8A89FE'}}>
