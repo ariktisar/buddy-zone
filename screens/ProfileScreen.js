@@ -15,16 +15,11 @@ export default class ProfileScreen extends Component {
         this.setState({user:doc.data()})
       })
 
-
    }
 
    componentWillUnmount(){
      this.unsubscribe()
    }
-
-
-    
-  
 
 
   render() {
@@ -51,6 +46,7 @@ export default class ProfileScreen extends Component {
           <Text style={styles.statTitle}>Following</Text>
         </View>
 
+
       </View>
        </View>
        <TouchableOpacity style={styles.button} onPress={()=>Fire.shared.signOut()}>
@@ -60,6 +56,7 @@ export default class ProfileScreen extends Component {
     );
   }
 }
+
 
 const styles=StyleSheet.create({
     container:{

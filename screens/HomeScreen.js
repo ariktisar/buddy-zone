@@ -1,3 +1,5 @@
+
+
 import React, { Component } from 'react';
 import { View, Text,StyleSheet, TouchableOpacity, LayoutAnimation, FlatList, Image } from 'react-native';
 import Fire from '../Fire'
@@ -7,39 +9,39 @@ import moment from 'moment'
 const dummy_post = [
   {
     id: '1',
-    name: 'Joe McKay',
+    name: 'Arik Intisar',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Hello friends. I am doing a course at programming hero on Web development. It is really good. You can also join here for only 5,500 taka. Really an amazing deal.',
     timestamp: 1569109273726,
     avatar: require('../assets/images/avatar.png'),
-    image: require('../assets/images/tempImage1.jpg')
+     image: require('../assets/images/tempImage1.png')
   },
   {
     id: '2',
-    name: 'Karyn Kim',
+    name: 'Jahid hasan Joy',
     text:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'Today I got a job at Shonali bank limited as IT manager. Thanks to the almighty for my achievement.',
     timestamp: 1569109273726,
-    avatar: require('../assets/images/avatar.png'),
+    avatar: require('../assets/images/avatar2.jpg'),
     image: require('../assets/images/tempImage2.jpg')
   },
   {
     id: '3',
-    name: 'Emerson Parsons',
+    name: 'Hridoy Khan',
     text:
-      'Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant.',
+      'My new album is on its way. Get it on itunes and spotify guys.',
     timestamp: 1569109273726,
-    avatar: require('../assets/images/avatar.png'),
+    avatar: require('../assets/images/avatar2.jpg'),
     image: require('../assets/images/tempImage3.jpg')
   },
   {
     id: '4',
-    name: 'Kathie Malone',
+    name: 'Asif Ahmed',
     text:
-      'At varius vel pharetra vel turpis nunc eget lorem. Lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor. Adipiscing tristique risus nec feugiat in fermentum.',
+      'Just got an scholarship from university of texus for a full funded',
     timestamp: 1569109273726,
-    avatar: require('../assets/images/avatar.png'),
-    image: require('../assets/images/tempImage4.jpg')
+    avatar: require('../assets/images/avatar2.jpg'),
+    image: require('../assets/images/texas.png')
   }
 ];
 export default class HomeScreen extends Component {

@@ -36,13 +36,13 @@ export default class LoginScreen extends Component {
             width: null,
             height: null,
             justifyContent:'center'}}>
-
          
         <Text style={styles.greeting}> {`Hello again. \n Welcome back.`} </Text>
         <View style={styles.errorMessage}>
     {this.state.errorMessage && <Text style={styles.error}>{this.state.errorMessage}</Text>}
       </View>
       <View style={styles.form}>
+
         <View>
             <Text style={styles.inputTitle}>Email</Text>
             <TextInput style={styles.input} autoCapitalize="none"
@@ -56,6 +56,7 @@ export default class LoginScreen extends Component {
             onChangeText={password=>this.setState({password})}></TextInput>
         </View>
       </View>
+
       <TouchableOpacity style={styles.button} onPress={this.handleLogin}>
           <Text style={{color:'#FFF',fontWeight:'500'}}>Sign in</Text>
       </TouchableOpacity>
@@ -67,6 +68,7 @@ export default class LoginScreen extends Component {
                 Sign up
             </Text>
         </Text>
+
 
       </TouchableOpacity>
       </ImageBackground>

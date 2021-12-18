@@ -11,11 +11,8 @@ export default class LoadingScreen extends Component {
     firebase.auth().onAuthStateChanged(user=>{
       this.props.navigation.navigate(user?"App":"Auth")
     })
-
-    
     
   }
-
   render() {
     return (
       <View style={styles.container}>

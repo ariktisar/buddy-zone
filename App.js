@@ -14,7 +14,6 @@ import NotificationScreen from './screens/NotificationScreen'
 import ProfileScreen from './screens/ProfileScreen'
 
 
-
 const AppContainer=createStackNavigator(
   {
   default:createBottomTabNavigator(
@@ -87,9 +86,6 @@ const AppContainer=createStackNavigator(
   headerMode:'none'
 }
 )
-
-
-
 
 
 const AuthStack=createStackNavigator({
